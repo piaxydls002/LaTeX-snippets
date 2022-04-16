@@ -1,2 +1,3 @@
-# TeX snippets
-by piaxydls
+TeX-snippets
+============
+
