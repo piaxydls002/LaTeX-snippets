@@ -66,9 +66,9 @@ i
 오래 걸림
 - 다 끝나면 ~/.bashrc 열어서 맨 마지막에
 ```sh
-export MANPATH="/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH"
-export INFOPATH="/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH"
-export PATH="/usr/local/texlive/2021/bin/x86_64-linux:$PATH"
+export MANPATH="/usr/local/texlive/2022/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2022/texmf-dist/doc/info:$INFOPATH"
+export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
 ```
 추가해주기
 
