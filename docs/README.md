@@ -26,20 +26,6 @@ Error Messages
   - https://docs.microsoft.com/ko-kr/windows/wsl/install-manual 의 4번 항목에 있는 Linux 커널 업데이트 패키지를 다운받아 설치
 -->
 
-Install TeX Live
-----------------
-```sh
-wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-tar -xvf install-tl-unx.tar.gz
-```
-`ls`로 install-tl-20220418 같은 폴더 있는 거 확인
-```sh
-cd install-tl-202*****(아까 확인한 폴더명)
-sudo perl install-tl
-i
-```
-오래 걸림
-
 Install SumatraPDF
 -------------------
 - https://www.sumatrapdfreader.org/download-free-pdf-viewer 가서 다운받아 설치
@@ -61,6 +47,27 @@ wget (방금 복사한 링크)
 sudo apt install ./nvim-linux64.deb
 ```
 입력 후 `nvim` 치면 실행됨
+
+Install TeX Live
+----------------
+```sh
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar -xvf install-tl-unx.tar.gz
+```
+`ls`로 install-tl-20220418 같은 폴더 있는 거 확인
+```sh
+cd install-tl-202*****(아까 확인한 폴더명)
+sudo perl install-tl
+i
+```
+오래 걸림
+- 다 끝나면 ~/.bashrc 열어서 맨 마지막에
+```sh
+export MANPATH="/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH"
+export PATH="/usr/local/texlive/2021/bin/x86_64-linux:$PATH"
+```
+추가해주기
 
 Install neovim plugins
 ----------------------
