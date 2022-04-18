@@ -48,7 +48,54 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
-+ ~/.config/nvim
++ ~/.config/nvim 폴더에 init.vim 생성하기
+```sh
+mkdir {.config,.config/nvim}
+cd .config/nvim
+nvim init.vim
+```
+
+i 쳐서 입력모드로 들어간 뒤 다음 내용 붙여넣고 Esc 후 :wq 로 저장 후 종료
+```vim
+:set number " show line number
+:set relativenumber " show relative line number
+
+:set autoindent " auto indent new line
+:set expandtab " change tab to space
+:set smarttab
+:set tabstop=4 " tab = 4 space
+:set shiftwidth=4 " <<, >> changes 4 space
+:set softtabstop=4 " 4 space == tab
+
+call plug#begin()
+
+Plug 'lervag/vimtex'
+let g:vimtex_view_general_options = '-reuse-instance @pdf'
+let g:vimtex_compiler_latexmk = {
+        \ 'executable' : 'latexmk',
+        \ 'options' : [
+        \   '-xelatex',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}
+let g:vimtex_view_general_viewer = 'sumatraPDF'
+    
+Plug 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:UltiSnipsEditSplit="vertical"
+
+let g:UltiSnipsSnippetDirectories=["my_snippets", "TeX-snippets"]
+
+Plug 'piaxydls002/TeX-snippets', {'dir': '~/.config/nvim/TeX-snippets'}
+
+call plug#end()
+```
+
 
 
 User Guide(Linux)
