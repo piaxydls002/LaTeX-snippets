@@ -42,9 +42,6 @@ Install neovim
 --------------
 - https://github.com/neovim/neovim/releases/latest
 에서 제일 아래로 내려가서 nvim-linux64.deb 우클릭 후 링크 주소 복사
-
-(2022-04-18 기준 `https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb`)
-
 ```
 wget (방금 복사한 링크)
 sudo apt install ./nvim-linux64.deb
