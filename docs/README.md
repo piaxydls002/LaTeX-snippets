@@ -12,6 +12,9 @@ wsl --install
 ```sh
 sudo apt-get update
 sudo apt-get upgrade
+sudo apt-get install latexmk
+sudo apt install python3-pip
+pip install neovim
 ```
 해주기
 
@@ -96,6 +99,7 @@ i 쳐서 입력모드로 들어간 뒤 다음 내용 붙여넣고(우클릭) Esc
 :set shiftwidth=4 " <<, >> changes 4 space
 :set softtabstop=4 " 4 space == tab
 
+
 call plug#begin()
 
 Plug 'lervag/vimtex'
@@ -112,6 +116,8 @@ let g:vimtex_compiler_latexmk = {
 let g:vimtex_view_general_viewer = 'sumatraPDF'
     
 Plug 'SirVer/ultisnips'
+let g:python3_host_prog = '/usr/bin/python3'
+
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
@@ -134,6 +140,6 @@ nvim test.tex
 ```vim
 template [tab]
 im [tab]
-//3[tab]5[tab]+nr3[tab]2[tab][tab]
+//3[tab]5[tab]+nr3[tab]2
 ```
 Esc누르고 :w로 저장, \ll 쳐서 컴파일되는 거 확인.(이러면 저장할 때마다 다시 컴파일됨) \lk로 컴파일 종료, \lc로 파일들 청소
