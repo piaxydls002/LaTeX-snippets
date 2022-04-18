@@ -32,7 +32,11 @@ Install TeX Live
 ```sh
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar -xvf install-tl-unx.tar.gz
-cd install-tl-20220222
+ls
+```
+`ls`로 install-tl-20220418 같은 폴더 있는 거 확인
+```sh
+cd install-tl-202*****(아까 확인한 폴더명)
 sudo perl install-tl
 i
 ```
