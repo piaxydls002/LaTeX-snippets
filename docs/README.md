@@ -27,6 +27,16 @@ Error Messages
   - https://docs.microsoft.com/ko-kr/windows/wsl/install-manual 의 4번 항목에 있는 Linux 커널 업데이트 패키지를 다운받아 설치
 -->
 
+Install TeX Live
+----------------
+```sh
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar -xvf install-tl-unx.tar.gz
+cd install-tl-20220222
+sudo perl install-tl
+i
+```
+
 Install neovim
 --------------
 https://github.com/neovim/neovim/releases/latest
@@ -55,7 +65,7 @@ cd .config/nvim
 nvim init.vim
 ```
 
-i 쳐서 입력모드로 들어간 뒤 다음 내용 붙여넣고 Esc 후 :wq 로 저장 후 종료
+i 쳐서 입력모드로 들어간 뒤 다음 내용 붙여넣고(우클릭) Esc 후 :wq 로 저장 후 종료
 ```vim
 :set number " show line number
 :set relativenumber " show relative line number
@@ -95,6 +105,8 @@ Plug 'piaxydls002/TeX-snippets', {'dir': '~/.config/nvim/TeX-snippets'}
 
 call plug#end()
 ```
+
+다시 nvim 들어가서 `:PlugInstall` 해주면 플러그인들 설치 완료
 
 
 
