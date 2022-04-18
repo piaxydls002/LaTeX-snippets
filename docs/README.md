@@ -3,13 +3,12 @@ User Guide(Windows)
 
 Install Ubuntu on Windows
 -------------------------
-관리자 권한으로 명령프롬프트/PowerShell 실행 후
+- 관리자 권한으로 명령프롬프트/PowerShell 실행 후
 ```powershell
-wsl--install
+wsl --install
 ```
 입력 후 재부팅
-
-Ubuntu 터미널에서 username/password 설정 후
+- Ubuntu 터미널에서 username/password 설정 후
 ```sh
 sudo apt-get update
 sudo apt-get upgrade
@@ -41,18 +40,18 @@ i
 ```
 오래 걸림
 
-Install Sumatra Pdf
+Install SumatraPDF
 -------------------
-https://www.sumatrapdfreader.org/download-free-pdf-viewer 가서 다운받아 설치
-설치 폴더(아마 `C:\Users\(사용자명)\AppData\Local\SumatraPDF`) 가서 SumatraPDF.exe의 복사본을 만들고 .exe를 제거한 SumatraPDF로 파일명 변경
-설치 폴더 경로 복사
-Win+S에 path 검색 - 시스템 환경 변수 편집 - 환경 변수 - [~에 대한 사용자 변수] 중 Path 더블클릭 - 새로 만들기 - 아까 복사한 경로 붙여넣기 - 확인x3
+- https://www.sumatrapdfreader.org/download-free-pdf-viewer 가서 다운받아 설치
+- 설치 폴더(아마 `C:\Users\(사용자명)\AppData\Local\SumatraPDF`) 가서 SumatraPDF.exe의 복사본을 만들고 .exe를 제거한 SumatraPDF로 파일명 변경
+- 설치 폴더 경로 복사
+- Win+S에 path 검색 - 시스템 환경 변수 편집 - 환경 변수 - [~에 대한 사용자 변수] 중 Path 더블클릭 - 새로 만들기 - 아까 복사한 경로 붙여넣기 - 확인x3
 
 
 
 Install neovim
 --------------
-https://github.com/neovim/neovim/releases/latest
+- https://github.com/neovim/neovim/releases/latest
 에서 제일 아래로 내려가서 nvim-linux64.deb 우클릭 후 링크 주소 복사
 
 (2022-04-18 기준 `https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb`)
@@ -65,13 +64,13 @@ sudo apt install ./nvim-linux64.deb
 
 Install neovim plugins
 ----------------------
-+ vim-plug
+- vim-plug
 ```sh
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
-+ ~/.config/nvim 폴더에 init.vim 생성하기
+- ~/.config/nvim 폴더에 init.vim 생성하기
 ```sh
 mkdir {.config,.config/nvim}
 cd .config/nvim
@@ -121,13 +120,13 @@ call plug#end()
 
 다시 nvim 들어가서 `:PlugInstall` 해주면 플러그인들 설치 완료
 
-
-
-User Guide(Linux)
-=================
-
-Guide to using Linux
-====================
-
-Guide to using Vim
-==================
+- 테스트
+```sh
+nvim test.tex
+```
+```vim
+template [tab]
+im [tab]
+//3[tab]5[tab]+nr3[tab]2[tab][tab]
+```
+Esc누르고 :w로 저장, \ll 쳐서 컴파일되는 거 확인.(이러면 저장할 때마다 다시 컴파일됨) \lk로 컴파일 종료, \lc로 파일들 청소
