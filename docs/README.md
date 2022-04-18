@@ -32,7 +32,6 @@ Install TeX Live
 ```sh
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar -xvf install-tl-unx.tar.gz
-ls
 ```
 `ls`로 install-tl-20220418 같은 폴더 있는 거 확인
 ```sh
@@ -40,6 +39,16 @@ cd install-tl-202*****(아까 확인한 폴더명)
 sudo perl install-tl
 i
 ```
+오래 걸림
+
+Install Sumatra Pdf
+-------------------
+https://www.sumatrapdfreader.org/download-free-pdf-viewer 가서 다운받아 설치
+설치 폴더(아마 `C:\Users\(사용자명)\AppData\Local\SumatraPDF`) 가서 SumatraPDF.exe의 복사본을 만들고 .exe를 제거한 SumatraPDF로 파일명 변경
+설치 폴더 경로 복사
+Win+S에 path 검색 - 시스템 환경 변수 편집 - 환경 변수 - [~에 대한 사용자 변수] 중 Path 더블클릭 - 새로 만들기 - 아까 복사한 경로 붙여넣기 - 확인x3
+
+
 
 Install neovim
 --------------
