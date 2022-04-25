@@ -15,6 +15,7 @@ sudo apt-get upgrade
 sudo apt-get install latexmk
 sudo apt install python3-pip
 pip install neovim
+pip install sympy
 ```
 해주기
 
