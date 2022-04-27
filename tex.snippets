@@ -83,76 +83,314 @@ endsnippet
 
 context "math()"
 snippet hat "hat" w
-\hat{$1}$0
+\hat{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"
 snippet tilde "tilde" w
-\tilde{$1}$0
+\tilde{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"
 snippet dot "dot" w
-\dot{$1}$0
+\dot{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"
 snippet ddot "ddot" w
-\ddot{$1}$0
+\ddot{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"
 snippet bar "bar" w
-\bar{$1}$0
+\bar{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"
 snippet vec "vec" w
-\vec{$1}$0
+\vec{${1:${VISUAL}}}$0
 endsnippet
 
 
 ## Binary Relations ##
 
 context "math()"
-snippet <= "leq" i
+snippet <= "leq"
 \leq
 endsnippet
 
 context "math()"
-snippet >= "geq" i
+snippet >= "geq"
 \geq
 endsnippet
 
 context "math()"
-snippet << "ll" i
+snippet << "ll"
 \ll
 endsnippet
 
 context "math()"
-snippet >> "gg" i
+snippet >> "gg"
 \gg
 endsnippet
 
 context "math()"
-snippet == "equiv" i
+snippet == "equiv"
 \equiv
 endsnippet
 
 context "math()"
-snippet ~ "sim" i
+snippet ~ "sim"
 \sim
 endsnippet
 
 context "math()"
-snippet ~= "simeq" i
+snippet ~= "simeq"
 \simeq
 endsnippet
 
 context "math()"
-snippet ~~ "approx" i
+snippet ~~ "approx"
 \approx
 endsnippet
+
+context "math()"
+snippet ~== "cong"
+\cong
+endsnippet
+
+
+## Binary Operators ##
+
+context "math()"
+snippet +- "pm"
+\pm
+endsnippet
+
+context "math()"
+snippet -+ "mp"
+\mp
+endsnippet
+
+context "math()"
+snippet . "cdot"
+\cdot
+endsnippet
+
+context "math()"
+snippet x "times"
+\times
+endsnippet
+
+context "math()"
+snippet / "div"
+\div
+endsnippet
+
+
+## BIG Operators ##
+
+context "math()"
+snippet sum "sum" w
+\sum_{$1}^{$2} $3
+endsnippet
+
+context "math()"
+snippet prod "prod" w
+\prod_{$1}^{$2} $3
+endsnippet
+
+context "math()"
+snippet int "int" w
+\int_{$1}^{$2} $3
+endsnippet
+
+context "math()"
+snippet oint "oint" w
+\oint_{$1}^{$2} $3
+endsnippet
+
+
+## Arrows ##
+
+context "math()"
+snippet <- "l arrow"
+\leftarrow
+endsnippet
+
+context "math()"
+snippet <-- "long l arrow"
+\longleftarrow
+endsnippet
+
+context "math()"
+snippet -> "r arrow"
+\rightarrow
+endsnippet
+
+context "math()"
+snippet --> "long r arrow"
+\longrightarrow
+endsnippet
+
+context "math()"
+snippet <-> "lr arrow"
+\leftrightarrow
+endsnippet
+
+context "math()"
+snippet <--> "long lr arrow"
+\longleftrightarrow
+endsnippet
+
+context "math()"
+snippet <= "L arrow"
+\Leftarrow
+endsnippet
+
+context "math()"
+snippet <== "long L arrow"
+\Longleftarrow
+endsnippet
+
+context "math()"
+snippet => "R arrow"
+\Rightarrow
+endsnippet
+
+context "math()"
+snippet ==> "long R arrow"
+\Longrightarrow
+endsnippet
+
+context "math()"
+snippet <=> "LR arrow"
+\Leftrightarrow
+endsnippet
+
+context "math()"
+snippet <==> "long LR arrow"
+\Longleftrightarrow
+endsnippet
+
+context "math()"
+snippet |-> "maps to"
+\mapsto
+endsnippet
+
+context "math()"
+snippet |--> "long maps to"
+\longmapsto
+endsnippet
+
+
+## Arrows as Accents ##
+
+
+
+## Miscellaneous Symbols ##
+
+context "math()"
+snippet l.. "ldots" w
+\ldots 
+endsnippet
+
+snippet c.. "cdots" w
+\cdots 
+endsnippet
+
+snippet v.. "vdots" w
+\vdots 
+endsnippet
+
+snippet d.. "ddots" w
+\ddots 
+endsnippet
+
+context "math()"
+snippet hbar "hbar" w
+\hbar
+endsnippet
+
+context "math()"
+snippet nabla "nabla" w
+\nabla
+endsnippet
+
+
+## Non-Mathematical Symbols ##
+
+context "math()"
+snippet dag "dagger" w
+\dag
+endsnippet
+
+context "math()"
+snippet ddag "ddagger" w
+\ddag
+endsnippet
+
+
+## Math Alphabets ##
+
+context "math()"
+snippet mathrm "mathrm" w
+\mathrm{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet mathit "mathit" w
+\mathit{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet mathnormal "mathnormal" w
+\mathnormal{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet mathcal "mathcal" w
+\mathcal{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet mathfrac "mathfrac" w
+\mathfrac{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet mathbb "mathbb" w
+\mathbb{${1:${VISUAL}}}$0
+endsnippet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -191,28 +429,6 @@ snippet != "not equal" iA
 \neq 
 endsnippet
 
-
-## COMPARISON ##
-
-context "math()"
-snippet <= "leq" iA
-\le 
-endsnippet
-
-context "math()"
-snippet >= "geq" iA
-\ge 
-endsnippet
-
-context "math()"
-snippet << "<<" iA
-\ll 
-endsnippet
-
-context "math()"
-snippet >> ">>" iA
-\gg 
-endsnippet
 
 
 ## SET THEORY ##
@@ -448,22 +664,6 @@ snippet __ "subscript" iA
 _{$1} $0
 endsnippet
 
-context "math()"
-snippet l.. "ldots" iA
-\ldots 
-endsnippet
-
-snippet c.. "cdots" iA
-\cdots 
-endsnippet
-
-snippet v.. "vdots" iA
-\vdots 
-endsnippet
-
-snippet d.. "ddots" iA
-\ddots 
-endsnippet
 
 
 
