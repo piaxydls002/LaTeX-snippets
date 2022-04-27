@@ -65,12 +65,7 @@ endsnippet
 ##########
 
 snippet im "Inline Math" w
-$$1$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-	snip.rv = ' '
-else:
-	snip.rv = ''
-`$2
+$${1:${VISUAL}}$$0
 endsnippet
 
 snippet dm "Display Math" w
@@ -84,7 +79,82 @@ endsnippet
 # Mathematical Symbols #
 ########################
 
-# https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols
+## Math Mode Accents ##
+
+context "math()"
+snippet hat "hat" w
+\hat{$1}$0
+endsnippet
+
+context "math()"
+snippet tilde "tilde" w
+\tilde{$1}$0
+endsnippet
+
+context "math()"
+snippet dot "dot" w
+\dot{$1}$0
+endsnippet
+
+context "math()"
+snippet ddot "ddot" w
+\ddot{$1}$0
+endsnippet
+
+context "math()"
+snippet bar "bar" w
+\bar{$1}$0
+endsnippet
+
+context "math()"
+snippet vec "vec" w
+\vec{$1}$0
+endsnippet
+
+
+## Binary Relations ##
+
+context "math()"
+snippet <= "leq" i
+\leq
+endsnippet
+
+context "math()"
+snippet >= "geq" i
+\geq
+endsnippet
+
+context "math()"
+snippet << "ll" i
+\ll
+endsnippet
+
+context "math()"
+snippet >> "gg" i
+\gg
+endsnippet
+
+context "math()"
+snippet == "equiv" i
+\equiv
+endsnippet
+
+context "math()"
+snippet ~ "sim" i
+\sim
+endsnippet
+
+context "math()"
+snippet ~= "simeq" i
+\simeq
+endsnippet
+
+context "math()"
+snippet ~~ "approx" i
+\approx
+endsnippet
+
+
 
 ## ARITHMETIC OPERATORS ##
 
