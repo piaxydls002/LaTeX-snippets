@@ -82,7 +82,8 @@ endsnippet
 ## Math Mode Accents ##
 
 context "math()"
-snippet "(?<!\\)(hat|tilde|dot|ddot|bar|vec)" "hat" rwA
+## snippet "(?<!\\)(hat|tilde|dot|ddot|bar|vec)" "hat" rwA
+snippet "(?<![\w\\])(hat|tilde|dot|ddot|bar|vec)" "hat" rwA
 \\`!p snip.rv = match.group(1)`{${VISUAL}$1}$0
 endsnippet
 
@@ -253,12 +254,10 @@ snippet "(l|c|v|d)\.\." "dots" riA
 \\`!p snip.rv = match.group(1)`dots
 endsnippet
 
-priority 1
 context "math()"
 snippet "(?<!\\)hbar" "hbar" wA
 \hbar
 endsnippet
-priority 0
 
 context "math()"
 snippet nabla "nabla" w
