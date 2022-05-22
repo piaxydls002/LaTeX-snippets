@@ -160,11 +160,11 @@ endsnippet
 
 post_jump "create_matrix_placeholders(snip)"
 snippet 'mat(\d+),(\d+)' "LaTeX array" br
-\begin{matrix}
+\begin{${1:pmatrix}}
 `!p
 snip.rv = create_matrix(match.group(1), match.group(2), "&", "\t", "\\\\\\\\\n")
 `$0
-\end{matrix}
+\end{$1}
 endsnippet
 
 snippet begin "begin/end" bA
