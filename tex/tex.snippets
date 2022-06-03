@@ -9,21 +9,6 @@ global !p
 # Utility functions
 from util import *
 
-# Constants
-environments = ['document',
-'figure', 'table',
-'description', 'enumerate', 'itemize', 'list',
-'math', 'displaymath', 'array', 'eqnarray', 'equation', 'subequations', 'multiline', 'gather', 'align', 'flalign',
-'theorem',
-'matrix', 'pmatrix', 'bmatrix', 'Bmatrix', 'vmatrix', 'Vmatrix', 'smallmatrix',
-'cases',
-'alignat',
-'center', 'flushleft', 'flushright', 'minipage', 'quotation', 'quote', 'verbatim', 'verse',
-'picture',
-'tabbing', 'tabular',
-'thebibiliography',
-'titlepage']
-
 endglobal
 
 
@@ -72,17 +57,10 @@ snip.rv = create_matrix(match.group(1), match.group(2), "&", "\t", "\\\\\\\\\n")
 \end{pmatrix}
 endsnippet
 
-priority -1
-snippet begin "begin/end" bA
-\begin{${3:$1`!p snip.rv = complete(t[1], environments)`$2}}
-    ${VISUAL}$0
-\end{$3}
-endsnippet
-priority 0
 
 snippet begin "begin/end" bA
 \begin{$1}
-    ${VISUAL}$0
+	${VISUAL}$0
 \end{$1}
 endsnippet
 
