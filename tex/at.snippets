@@ -1,0 +1,60 @@
+global !p
+
+from util import *
+
+endglobal
+
+#################
+#################
+## @ SNIPPETS  ##
+#################
+#################
+
+###############
+# 1 PARAMETER #
+###############
+
+context "math()"
+snippet @sr "square root" iA
+\sqrt{${VISUAL}$1}$0
+endsnippet
+
+context "math()"
+snippet @nr "nth root" iA
+\sqrt[$1]{${VISUAL}$2}$0
+endsnippet
+
+## Accents ##
+
+context "math()"
+snippet "@(hat|tilde|dot|ddot|bar|vec)" "accents" riA
+\\`!p snip.rv = match.group(1)`{${VISUAL}$1}$0
+endsnippet
+
+
+## Mathematical Fonts ##
+context "math()"
+snippet @cal "caligraphic" iA
+\mathcal{${VISUAL}$1}$0
+endsnippet
+
+context "math()"
+snippet @frak "fraktur" iA
+\mathfrak{${VISUAL}$1}$0
+endsnippet
+
+context "math()"
+snippet @bb "blackboard bold" iA
+\mathbb{${VISUAL}$1}$0
+endsnippet
+
+
+###############
+# 2 PARAMETER #
+###############
+
+
+
+
+
+

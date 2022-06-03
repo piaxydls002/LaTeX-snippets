@@ -1,0 +1,74 @@
+global !p
+
+from util import *
+
+endglobal
+
+
+###############
+# ENVIRONMENT #
+###############
+
+snippet beg "begin/end" bA
+\begin{$1}
+	${VISUAL}$0
+\end{$1}
+endsnippet
+
+
+#############
+# MATH MODE #
+#############
+
+snippet im "Inline Math" w
+$${VISUAL}$1$$0
+endsnippet
+
+snippet dm "Display Math" w
+\[
+	${VISUAL}$1
+\]$0
+endsnippet
+
+###############
+# 0 PARAMETER #
+###############
+
+context "math()"
+snippet "(l|c|v|d)\.\." "dots" riA
+\\`!p snip.rv = match.group(1)`dots
+endsnippet
+
+###############
+# 1 PARAMETER #
+###############
+
+## Superscripts and Subscripts ##
+
+snippet ^^ "superscript" iA
+^{$1}$0
+endsnippet
+
+snippet __ "subscript" iA
+_{$1}$0
+endsnippet
+
+
+
+
+## BIG Operators ##
+
+context "math()"
+snippet "(?<!\\)(sum|prod|int|oint)" "hat" rwA
+\\`!p snip.rv = match.group(1)`_{$1}^{$2} ${VISUAL}$0
+endsnippet
+
+snippet lim "limit" w
+\lim_{${1:n} \to ${2:\infty}}
+endsnippet
+
+
+
+
+
+

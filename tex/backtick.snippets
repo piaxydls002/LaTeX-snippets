@@ -1,10 +1,18 @@
 global !p
+
 from util import *
+
 endglobal
 
-###############
-# ` snippets  #
-###############
+#################
+#################
+## ` SNIPPETS  ##
+#################
+#################
+
+###################
+# Greek Alphabets #
+###################
 
 context "math()"
 snippet `a "alpha" iA
@@ -206,6 +214,20 @@ snippet `vf "varphi" iA
 \varphi
 endsnippet
 
+#################
+# Other Symbols #
+#################
+
+context "math()"
+snippet `A "forall" iA
+\forall
+endsnippet
+
+context "math()"
+snippet `E "exists" iA
+\exists
+endsnippet
+
 context "math()"
 snippet `0 "emptyset" iA
 \emptyset
@@ -239,16 +261,6 @@ endsnippet
 context "math()"
 snippet `* "times" iA
 \times
-endsnippet
-
-context "math()"
-snippet `A "forall" iA
-\forall
-endsnippet
-
-context "math()"
-snippet `E "exists" iA
-\exists
 endsnippet
 
 context "math()"
