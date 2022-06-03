@@ -6,18 +6,6 @@
 
 global !p
 
-# Contexts
-def math():
-	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
-
-def comment():
-	return vim.eval('vimtex#syntax#in_comment()') == '1'
-
-def env(name):
-	[x,y] = vim.eval("vimtex#env#is_inside('" + name + "')")
-	return x != '0' and y != '0'
-
-
 # Utility functions
 from util import *
 
@@ -130,17 +118,6 @@ snippet "(?<![\w\\])(hat|tilde|dot|ddot|bar|vec)" "hat" rwA
 \\`!p snip.rv = match.group(1)`{${VISUAL}$1}$0
 endsnippet
 
-## Greek Letters ##
-
-global !p
-greek = ['alpha', 'beta', 'gamma', 'Gamma', 'delta', 'Delta', 'epsilon', 'zeta', 'eta', 'theta', 'Theta', 'iota', 'kappa', 'lambda', 'Lambda', 'mu', 'nu', 'xi', 'Xi', 'pi', 'Pi', 'rho', 'sigma', 'Sigma', 'tau', 'upsilon', 'Upsilon', 'phi', 'Phi', 'chi', 'psi', 'Psi', 'omega', 'Omega',
-'varepsilon', 'vartheta', 'varrho', 'varphi']
-endglobal
-
-context "math()"
-snippet ` "greek" A
-\\$1`!p snip.rv = complete(t[1], greek)`$0
-endsnippet
 
 ## Binary Relations ##
 
