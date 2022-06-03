@@ -30,13 +30,16 @@ Error Messages
   - https://docs.microsoft.com/ko-kr/windows/wsl/install-manual 의 4번 항목에 있는 Linux 커널 업데이트 패키지를 다운받아 설치
 -->
 
-Install SumatraPDF
--------------------
+Install SumatraPDF (Windows)
+----------------------------
 - https://www.sumatrapdfreader.org/download-free-pdf-viewer 가서 다운받아 설치
 - 설치 폴더(아마 `C:\Users\(사용자명)\AppData\Local\SumatraPDF`) 가서 SumatraPDF.exe의 복사본을 만들고 .exe를 제거한 SumatraPDF로 파일명 변경
 - 설치 폴더 경로 복사
 - Win+S에 path 검색 - 시스템 환경 변수 편집 - 환경 변수 - [~에 대한 사용자 변수] 중 Path 더블클릭 - 새로 만들기 - 아까 복사한 경로 붙여넣기 - 확인x3
 
+Install Skim (Mac)
+------------------
+- brew cask install skim
 
 
 Install neovim
@@ -111,8 +114,9 @@ let g:vimtex_compiler_latexmk = {
         \   '-interaction=nonstopmode',
         \ ],
         \}
-let g:vimtex_view_general_viewer = 'sumatraPDF'
-    
+let g:vimtex_view_general_viewer = 'sumatraPDF'  " for Windows
+" let g:vimtex_view_general_viewer = 'skim'  " for Mac
+
 Plug 'SirVer/ultisnips'
 let g:python3_host_prog = '/usr/bin/python3'
 
