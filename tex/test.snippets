@@ -336,7 +336,7 @@ priority 1
 snippet pdv "partial derivative" iA
 \frac{\partial $1}{\partial $2} $0
 endsnippet
-priority 0
+priority -100
 
 snippet -> "to" iA
 $\to$
@@ -467,7 +467,7 @@ init_printing()
 snip.rv = eval('latex(' + match.group(1).replace('\\', '').replace('^', '**').replace('{', '(').replace('}', ')') + ')')
 `
 endsnippet
-priority 0
+priority -100
 
 
 
