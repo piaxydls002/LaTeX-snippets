@@ -1,3 +1,50 @@
+priority -1
+snippet testdoc "test document"
+\documentclass[a4paper,14pt,chapter]{oblivoir}
+\usepackage{fapapersize}
+\usefapapersize{*,*,30mm,*,30mm,*}
+
+\usepackage{endnotes}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+
+\begin{document}
+\oblivoirchapterstyle{default}
+
+\title{대수학}
+\author{이인석}
+\date{\today}
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\chapter{대수적 구조 I}
+\tiny 수학 과목의 첫 강의에는 언제나 序論이 없다. 그저 묵묵히 첫 쪽부터 훈련을 시작할 뿐이다.
+\section{Algebraic structure}
+`기하'나 `함수'가 영어의 중국어 音借인 것과는 달리 `代數'는 중국과 우리의 고전에 연유하고 있다. 고전에서 `대수'의 뜻은 `대입하는 수' 혹은 `숫자 대신 쓰이는 기호' 정고로 생각되지만 확실하지는 않다. ``代數學(algebra)''을 정확하게 정의하는 것은 쉬운 일이 아니겠지만, ``대수학''은 \textbf{algebraic structure(대수적 구조)}들을 공부하는 學問이라고 말할 수 있다.\footnote{대수학은 代數(댓수)와 行列(항렬)을 공부하므로 족보학의 일부라는 주장도 있다\(\cdots \cdots\).}
+
+이 節에서는 우리가 공부할 다양한 algebraic structure들을 정의한다. 우리는 이미 [I]에서 F-vector space와 ${1: group이라고 쳐 보세요}이라는 algebraic structure를 배웠다.\footnote{이 책에서[I]은 항상 [학부 대수학 강의 I; 선형대수와 군]을 의미하기로 한다. 그리고, 예를 들어, [I, 정리 1.2.3]의 표기법도 사용한다.} 즉, 대수적 구조란 어떤 집합에 몇 개의 연산 구조가 주어진 것을 뜻한다.
+
+${1/\w+\s*/\u$0/}은 가장 간단한 구조를 갖는 algebraic structure이다. 즉, $1은 ${2: Tab / Shift+Tab으로 칸들간에 이동}
+
+\newpage
+
+\subsection{${3: Algebraic Structure}}
+
+다음 줄을 천천히 똑같이 따라서 쳐 보세요([tab]은 탭 키 누르기)
+dm[tab]`A`e`{@bbR[tab],`E`ds.t.`e<`d<`8
+$0
+
+더 많은 기능은 엑셀에 업데이트 예정.
+\end{document}
+endsnippet
+
+
+
 priority -100
 clearsnippets
 
@@ -37,6 +84,7 @@ snippet template "Basic Template" b
 
 \begin{document}
 
+dm[tab]
 $0
 
 \end{document}
