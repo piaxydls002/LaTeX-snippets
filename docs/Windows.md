@@ -5,8 +5,12 @@ Install TeX Live
 --------------------------
 - https://www.tug.org/texlive/windows.html
 로 가서 Easy install 항목의 install-tl-windows.exe 받아서 설치
-- TeXworks는 텍 실행
 - 1시간 넘게 걸리니까 설치하면서 다음 항목으로 ㄱ
+
+Install Git
+---------------
+http://git-scm.com/download/win
+들어가서 가장 최근 거 받아서 설치
 
 Install gVim
 ---------------------------
@@ -42,9 +46,9 @@ https://www.shortcutfoo.com/blog/top-50-vim-configuration-options/
 ```vim
 set autoindent " New lines inherit the indentation of previous lines
 set expandtab " Convert tabs to spaces
-set filetype indent on " Enable indentation rules that are file-type specific
+filetype indent on " Enable indentation rules that are file-type specific
 set shiftround " When shifting lines, round the indentation to the nearest multiple of "shiftwidth"
-set shiftwidth = 4 " When shifting(<<, >>), indent using four spaces
+set shiftwidth=4 " When shifting(<<, >>), indent using four spaces
 set smarttab " Insert "tabstop" number of spaces when the "tab" key is pressed
 set tabstop=4 " Indent using 4 spaces
 set softtabstop=4 " 
@@ -54,7 +58,7 @@ set ignorecase " Ignore case when searching
 set incsearch " Incremental search that shows partial matches
 set smartcase " Automatically switch search to case-sensitive when search query contains an uppercase letter
 
-set laststatus = 2 " Always display the status bar
+set laststatus=2 " Always display the status bar
 set ruler " Always show cursor position
 set wildmenu " Display command line's tab complete options as a menu
 set cursorline " Highlight the line currently under cursor
@@ -64,8 +68,8 @@ set noerrorbells " Disable beep on errors
 set visualbell " Flash the screen instead of beeping on errors
 set title " Set the window's title, reflecting the file currently being edited
 
-set backspace = indent, eol, start " Allow backspacing over indentation, line breaks and insertion start
-set history = 1000 " Increase the undo limit
+set backspace=indent,eol,start " Allow backspacing over indentation, line breaks and insertion start
+set history=1000 " Increase the undo limit
 
 
 call plug#begin()
