@@ -93,21 +93,14 @@ set history=1000 " Increase the undo limit
 call plug#begin()
 
 Plug 'lervag/vimtex'
-let g:vimtex_view_general_options = '-reuse-instance @pdf'
-let g:vimtex_compiler_latexmk = {
-        \ 'executable' : 'latexmk',
-        \ 'options' : [
-        \   '-xelatex',
-        \   '-file-line-error',
-        \   '-synctex=1',
-        \   '-interaction=nonstopmode',
-        \ ],
+let g:vimtex_imaps_enabled = 0
+let g:vimtex_view_general_viewer = 'sumatraPDF'
+let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_compiler_latexmk_engines = {
+        \ '_' : '-xelatex',
         \}
-let g:vimtex_view_general_viewer = 'sumatraPDF'  " for Windows
-" let g:vimtex_view_general_viewer = 'skim'  " for Mac
 
 Plug 'SirVer/ultisnips'
-let g:python3_host_prog = '/usr/bin/python3'
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
