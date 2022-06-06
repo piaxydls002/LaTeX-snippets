@@ -7,10 +7,28 @@ Install TeX Live
 로 가서 Easy install 항목의 install-tl-windows.exe 받아서 설치
 - 1시간 넘게 걸리니까 설치하면서 다음 항목으로 ㄱ
 
+Install SumatraPDF
+----------------------------
+- https://www.sumatrapdfreader.org/download-free-pdf-viewer 가서 64-bit 버전 다운받아 설치
+    - 설치위치 기록 (아마 C:\Users\(username)\AppData\Local\SumatraPDF)
+- 앞에서 기록한 설치위치를 복사하고, 제어판이나 시작 메뉴에서 '계정의 환경 변수 편집' 검색해서 열기
+- 사용자 변수에서 Path 더블클릭하고 새로 만들기 - 복사한 설치위치 붙여넣고 저장
+- 설정 - 옵션 - 명령줄 역방향 탐색 설정에 `gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv<CR>:execute 'drop ' . fnameescape('%f')<CR>:%l<CR>:normal! zzzv<CR>:call remote_foreground('GVIM')<CR><CR>"` 
+
+Install Python
+---------------------
+<!--
+:version
+-->
+- https://www.python.org/downloads/
+에서 가장 최신 버전 받아서 설치
+    - Add to PATH 옵션에 
+
 Install Git
 ---------------
-http://git-scm.com/download/win
+-http://git-scm.com/download/win
 들어가서 가장 최근 거 받아서 설치
+    - 중간에 Adjusting the name of the initial branch 옵션에서는 Let Git decide 말고 Override the default branch name for new repositories 선택, main으로 설정하고 진행
 
 Install gVim
 ---------------------------
@@ -38,7 +56,7 @@ Install vim-plug
 
 Setup Vim
 ------------------------
-- gVim 관리자 권한으로 실행한 후, 편집 - 시작 설정 들어가서 맨 밑에 아래 내용 붙여넣기.
+- gVim 관리자 권한으로 실행한 후, 편집 - 시작 설정 들어가서 맨 밑에 아래 내용 붙여넣고 저장.
 
 <!--
 https://www.shortcutfoo.com/blog/top-50-vim-configuration-options/
@@ -104,3 +122,21 @@ Plug 'piaxydls002/LaTeX-snippets'
 call plug#end()
 ```
 
+Install Plugins
+------------------
+- Vim 열어서 :PlugInstall 치고 엔터. 창 나오는 건 :q로 그냥 끄면 됨.
+- 나중에 업데이트는 :PlugUpdate
+- `C:\Users\(username)`에 `.latexmkrc` 라는 이름의 파일 만들어주고 열어서 `$xelatex = "xelatex -file-line-error -synctex=1 -interaction=nonstopmode -recorder %S"` 적고 저장
+
+재부팅
+----------
+- 그냥 한번 해주기
+
+시작!
+-------
+- 샘플 텍 파일 test.tex 만듬. 연결 프로그램은 Vim으로 해서 열어주기
+- 열어서 testdoc이라고 입력
+- group 치고 tab 누르고 다시 tab tab 후 시키는 대로
+- :w로 저장한 후에 \ll 눌러서 컴파일
+- \lk나 \ll 다시 눌러서 컴파일 중지, \lc로 파일 청소
+- 컴파일 중이면 저장할 때마다 자동으로 업데이트됨.
