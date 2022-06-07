@@ -22,7 +22,7 @@ Install Python
 -->
 - https://www.python.org/downloads/
 에서 가장 최신 버전 받아서 설치
-    - Add to PATH 옵션에 
+    - Add to PATH 옵션에 체크
 
 Install Git
 ---------------
