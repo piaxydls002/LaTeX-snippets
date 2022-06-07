@@ -94,8 +94,6 @@ call plug#begin()
 
 Plug 'lervag/vimtex'
 let g:vimtex_imaps_enabled = 0
-let g:vimtex_view_general_viewer = 'sumatraPDF'
-let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
 let g:vimtex_compiler_latexmk_engines = {
         \ '_' : '-xelatex',
         \}
