@@ -37,7 +37,7 @@ Install gVim
 - 설치하면 gVim과 gVim-Easy가 설치되는데 gVim-Easy 관리자 권한으로 실행
 - 편집 - 글꼴 고르기 로 가서 원하는 글꼴 설정
 - `<Control-R>=&guifont` 치고 엔터 치면 `Fixedsys:h15:cHANGEUL:qDRAFT` 같은 거 나올 거임. 그거 복사하기
-- 편집 - 시작 설정 들어가면 위쪽 절반에 새로운 문서가 나올 거임. 그 문서 마지막 줄로 가서 `set guifont = <복사한 내용>` 입력하고 파일 - 저장.
+- 편집 - 시작 설정 들어가면 위쪽 절반에 새로운 문서가 나올 거임. 그 문서 마지막 줄로 가서 `set guifont=<복사한 내용>` 입력(= 주위로 공백 X)하고 파일 - 저장.
 <!--
 - `:set guifont?` 치고 엔터 치면 `guifont=Fixedsys:h20:cHANGEUL:qDRAFT` 같은 거 나올 거임. 그거 복사해서
 -->
