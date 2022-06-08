@@ -142,11 +142,10 @@ $xelatex = "xelatex -file-line-error -synctex=1 -interaction=nonstopmode -record
 - \lC로 모든 파일 청소
 - \lt나 \lT로 목차 보기
 - \lv로 pdf의 해당 위치로 이동
-- pdf에서 더블클릭해서 tex파일의 해당 위치로 이동
-혹시 안 되면 SumatraPDF 열어서 설정 - 옵션 - 명령줄 역방향 탐색 설정에
+- pdf에서 더블클릭해서 tex파일의 해당 위치로 이동 (혹시 안 되면 SumatraPDF 열어서 설정 - 옵션 - 명령줄 역방향 탐색 설정에
 ```
 gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv<CR>:execute 'drop ' . fnameescape('%f')<CR>:%l<CR>:normal! zzzv<CR>:call remote_foreground('GVIM')<CR><CR>"
 ```
-적어주기
+적어주기)
 
 
