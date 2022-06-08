@@ -13,7 +13,6 @@ Install SumatraPDF
     - 설치위치 기록 (아마 `C:\Users\(username)\AppData\Local\SumatraPDF)`
 - 앞에서 기록한 설치위치를 복사하고, 제어판이나 시작 메뉴에서 '계정의 환경 변수 편집' 검색해서 열기
 - 사용자 변수에서 Path 더블클릭하고 새로 만들기 - 복사한 설치위치 붙여넣고 저장
-- 설정 - 옵션 - 명령줄 역방향 탐색 설정에 `gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv<CR>:execute 'drop ' . fnameescape('%f')<CR>:%l<CR>:normal! zzzv<CR>:call remote_foreground('GVIM')<CR><CR>"` 
 
 Install Python
 ---------------------
@@ -118,6 +117,7 @@ Install Plugins
 - Vim 열어서 :PlugInstall 치고 엔터. 창 나오는 건 :q로 그냥 끄면 됨.
 - 나중에 업데이트는 :PlugUpdate
 - `C:\Users\(username)`에 `.latexmkrc` 라는 이름의 파일 만들어주고 열어서 `$xelatex = "xelatex -file-line-error -synctex=1 -interaction=nonstopmode -recorder %S"` 적고 저장
+- SumatraPDF 열어서 설정 - 옵션 - 명령줄 역방향 탐색 설정에 `gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv<CR>:execute 'drop ' . fnameescape('%f')<CR>:%l<CR>:normal! zzzv<CR>:call remote_foreground('GVIM')<CR><CR>"` 
 
 재부팅
 ----------
