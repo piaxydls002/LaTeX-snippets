@@ -25,7 +25,7 @@ Install Python
 
 Install Git
 ---------------
--http://git-scm.com/download/win
+- http://git-scm.com/download/win
 들어가서 가장 최근 거 받아서 설치
     - 중간에 Adjusting the name of the initial branch 옵션에서는 Let Git decide 말고 Override the default branch name for new repositories 선택, main으로 설정하고 진행
 
