@@ -121,11 +121,7 @@ Install Plugins
 $xelatex = "xelatex -file-line-error -synctex=1 -interaction=nonstopmode -recorder %S"
 ```
 적고 저장
-- SumatraPDF 열어서 설정 - 옵션 - 명령줄 역방향 탐색 설정에
-```
-gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv<CR>:execute 'drop ' . fnameescape('%f')<CR>:%l<CR>:normal! zzzv<CR>:call remote_foreground('GVIM')<CR><CR>"
-```
-적어주기
+
 
 재부팅
 ----------
@@ -137,5 +133,20 @@ gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv
 - 열어서 testdoc이라고 입력
 - group 치고 tab 누르고 다시 tab tab 후 시키는 대로
 - :w로 저장한 후에 \ll 눌러서 컴파일
-- \lk나 \ll 다시 눌러서 컴파일 중지, \lc로 파일 청소
-- 컴파일 중이면 저장할 때마다 자동으로 업데이트됨.
+
+왔다갔다하기 및 기타 기능들
+-----------------------------------
+- \ll 눌러서 컴파일 시작 (이후로는 :w로 파일 저장할 때마다 자동 컴파일됨)
+- \lk나 \ll 다시 눌러서 컴파일 중지
+- \lc로 파일 청소
+- \lC로 모든 파일 청소
+- \lt나 \lT로 목차 보기
+- \lv로 pdf의 해당 위치로 이동
+- pdf에서 더블클릭해서 tex파일의 해당 위치로 이동
+혹시 안 되면 SumatraPDF 열어서 설정 - 옵션 - 명령줄 역방향 탐색 설정에
+```
+gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv<CR>:execute 'drop ' . fnameescape('%f')<CR>:%l<CR>:normal! zzzv<CR>:call remote_foreground('GVIM')<CR><CR>"
+```
+적어주기
+
+
