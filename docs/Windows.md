@@ -10,7 +10,7 @@ Install TeX Live
 Install SumatraPDF
 ----------------------------
 - https://www.sumatrapdfreader.org/download-free-pdf-viewer 가서 64-bit 버전 다운받아 설치
-    - 설치위치 기록 (아마 C:\Users\(username)\AppData\Local\SumatraPDF)
+    - 설치위치 기록 (아마 `C:\Users\(username)\AppData\Local\SumatraPDF)`
 - 앞에서 기록한 설치위치를 복사하고, 제어판이나 시작 메뉴에서 '계정의 환경 변수 편집' 검색해서 열기
 - 사용자 변수에서 Path 더블클릭하고 새로 만들기 - 복사한 설치위치 붙여넣고 저장
 - 설정 - 옵션 - 명령줄 역방향 탐색 설정에 `gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv<CR>:execute 'drop ' . fnameescape('%f')<CR>:%l<CR>:normal! zzzv<CR>:call remote_foreground('GVIM')<CR><CR>"` 
