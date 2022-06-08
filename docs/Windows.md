@@ -116,12 +116,12 @@ Install Plugins
 ------------------
 - Vim 열어서 :PlugInstall 치고 엔터. 창 나오는 건 :q로 그냥 끄면 됨.
 - 나중에 업데이트는 :PlugUpdate
-- `C:\Users\(username)`에 `.latexmkrc` 라는 이름의 파일 만들어주고 열어서 `$xelatex = "xelatex -file-line-error -synctex=1 -interaction=nonstopmode -recorder %S"` 적고 저장
-- SumatraPDF 열어서 설정 - 옵션 - 명령줄 역방향 탐색 설정에 `gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv<CR>:execute 'drop ' . fnameescape('%f')<CR>:%l<CR>:normal! zzzv<CR>:call remote_foreground('GVIM')<CR><CR>"` 
+- `C:\Users\(username)`에 `.latexmkrc` 라는 이름의 파일 만들어주고 열어서 ```$xelatex = "xelatex -file-line-error -synctex=1 -interaction=nonstopmode -recorder %S"``` 적고 저장
+- SumatraPDF 열어서 설정 - 옵션 - 명령줄 역방향 탐색 설정에 ```gvim --servername GVIM --remote-send "<C-\><C-n>:drop %f<CR>:%l<CR>:normal! zzzv<CR>:execute 'drop ' . fnameescape('%f')<CR>:%l<CR>:normal! zzzv<CR>:call remote_foreground('GVIM')<CR><CR>"```
 
 재부팅
 ----------
-- 그냥 한번 해주기
+- TexLive 설치 끝나고 한번 해주기
 
 시작!
 -------
