@@ -118,8 +118,11 @@ Install Plugins
 - 나중에 업데이트는 :PlugUpdate
 - `C:\Users\(username)`에 `.latexmkrc` 라는 이름의 파일 만들어주고 열어서
 ```
-$xelatex = "xelatex -file-line-error -synctex=1 -interaction=nonstopmode -recorder %S"
+$xelatex = "xelatex -file-line-error -synctex=-1 -interaction=nonstopmode -recorder %S"
 ```
+<!--
+synctex=1로 하면 .gz로 저장되는데 sumatra가 별로 안 좋아해서 잘 안 된다 함
+-->
 적고 저장
 
 
