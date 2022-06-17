@@ -106,7 +106,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "~/vimfiles/plugged/my_snippets"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "plugged/my_snippets"]
 
 Plug 'piaxydls002/LaTeX-snippets'
 
