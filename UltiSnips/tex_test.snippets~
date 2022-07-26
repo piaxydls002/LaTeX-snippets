@@ -1,15 +1,44 @@
 priority -1
 
+snippet fdoc "femtos doc" A
+\makeatletter
+\def\input@path{{./}{../}}
+\makeatother
+\def\ftitle{$1}
+\def\fsubtitle{$2}
+\documentclass{Classes/Femtos}
+
+\usepackage{import}
+% \usepackage{Packages/sol2back}
+\usepackage{Packages/solwithprob}
+
+\begin{document}
+
+\import{${3:full_path}}{$0}
+
+\printsolution
+
+\end{document}
+endsnippet
+
+snippet import "import" A
+\import{${1:full_path}}{$0}
+endsnippet
+
+snippet subimport "subimport" A
+\subimport{${1:path_extension}}{$0}
+endsnippet
+
 snippet phas "phas" A
 \begin{Problem}
 \problem
-	$0
+$0
 \hint
 
 \answer
-	
+
 \solution
-	
+
 \end{Problem}
 endsnippet
 
