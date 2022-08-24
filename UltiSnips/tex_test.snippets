@@ -3,7 +3,7 @@ priority -1
 snippet fdoc "femtos doc" A
 \makeatletter
 \def\input@path{{${1:../}}}
-\def\fontdir{$1Fonts/}
+\providecommand{\fontdir}{$1Fonts/}
 \makeatother
 
 \def\ftitle{${2:title}}
@@ -16,7 +16,7 @@ snippet fdoc "femtos doc" A
 
 \begin{document}
 
-\import{${4:full_path}}{$0}
+\subimport{}{$0}
 
 \printsolution
 
