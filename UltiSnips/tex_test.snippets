@@ -1,8 +1,13 @@
 priority -1
 
 snippet fdoc "femtos doc" A
-\def\ftitle{$1}
-\def\fsubtitle{$2}
+\makeatletter
+\def\input@path{{${1:../}}}
+\def\fontdir{$1/Fonts/}
+\makeatother
+
+\def\ftitle{${2:title}}
+\def\fsubtitle{${3:subtitle}}
 \documentclass{Classes/Femtos}
 
 \usepackage{import}
@@ -11,7 +16,7 @@ snippet fdoc "femtos doc" A
 
 \begin{document}
 
-\import{${3:full_path}}{$0}
+\import{${4:full_path}}{$0}
 
 \printsolution
 
