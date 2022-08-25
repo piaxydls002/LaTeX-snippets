@@ -1,6 +1,7 @@
 priority -1
 
 snippet fdoc "femtos doc" A
+% base의 경로 입력해 주기
 \makeatletter
 \def\input@path{{${1:../}}}
 \providecommand{\fontdir}{$1Fonts/}
@@ -11,8 +12,7 @@ snippet fdoc "femtos doc" A
 \documentclass{Classes/Femtos}
 
 \usepackage{import}
-% \usepackage{Packages/sol2back}
-\usepackage{Packages/solwithprob}
+\usepackage[${4:0}]{Packages/probformat}
 
 \begin{document}
 
@@ -33,6 +33,19 @@ endsnippet
 
 snippet phas "phas" A
 \begin{Problem}
+\problem
+$0
+\hint
+
+\answer
+
+\solution
+
+\end{Problem}
+endsnippet
+
+snippet npha "named phas" A
+\begin{Problem}[${1:problem name}]
 \problem
 $0
 \hint
