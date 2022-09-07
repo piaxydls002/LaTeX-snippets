@@ -3,7 +3,7 @@ priority -1
 snippet fdoc "femtos doc" A
 % base의 경로 입력해 주기
 \makeatletter
-\def\input@path{{${1:../}}}
+\def\input@path{{${1:../../}}}
 \providecommand{\fontdir}{$1Fonts/}
 \makeatother
 
@@ -55,6 +55,17 @@ $0
 \solution
 
 \end{Problem}
+endsnippet
+
+snippet @mat "matrix" A
+\begin{$1matrix}
+$0&&\\
+&&
+\end{$1matrix}
+endsnippet
+
+snippet @img "includegraphics" A
+\includegraphics{${0:filename}}
 endsnippet
 
 snippet testdoc "test document" A
